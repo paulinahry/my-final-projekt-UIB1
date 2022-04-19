@@ -1,0 +1,23 @@
+{
+  "name": "my-final-projekt-uib1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "aufbau": "mkdir -p src/scss && touch src/index.html && touch src/scss/_layout.scss && touch src/scss/_helpers.scss touch src/scss/_reset.scss touch src/scss/_variables.scss && touch src/scss/_typography.scss && echo '@import \"helpers\";\n@import \"typography\";\n@import \"layout\"; ' > src/scss/main.scss",
+    "watch": "sass -w ./src/scss/main.scss ./src/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulinahry/my-final-projekt-UIB1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulinahry/my-final-projekt-UIB1/issues"
+  },
+  "homepage": "https://github.com/paulinahry/my-final-projekt-UIB1#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1"
+  }
+}
