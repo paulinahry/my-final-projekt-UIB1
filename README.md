@@ -1,4 +1,4 @@
 # Final UIB Project
 ***
 ## Description
-* basic recipes page 
+* basic recipes blog-page  

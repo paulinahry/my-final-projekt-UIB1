@@ -1,0 +1,142 @@
+@mixin flex-center ($direct: column, $just: center, $align-items: center){
+    display: flex;
+    flex-direction: $direct;
+    justify-content: $just;
+    align-items: $align-items;
+}
+
+@mixin flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center
+}
+
+// Headlines h1
+@mixin h1 {
+    background-color: $lightPinkColor;
+    h1{
+        font-size: 1.2em;
+        text-align: center;
+        padding: 1em 0;
+        letter-spacing: .1em;
+
+            span{
+                display: block;
+                font-family: 'Square Peg';
+                font-size: 2em;
+                letter-spacing: 0.2em;
+        }
+    }
+}  
+
+// Black & White radius button used for 'read-more'
+@mixin read-more-btn {
+    background-color: rgb(5, 8, 8);
+    color: white;
+    border: 1px black solid;
+    border-radius: .3em;
+    padding: .4em;
+    margin: .6em;
+    cursor: pointer;
+    & button:hover{
+        background-color: white;
+        color: black;
+    }
+}
+
+// Font Awesome check-sign
+@mixin check-sign {
+    font-family: "Font Awesome 6 Free"; 
+    font-weight: 700; 
+    content: "\f00c";
+    padding-right: 4px;
+}
+
+// Articles
+@mixin article-recipe {
+    margin: .5em .5em;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:center;
+    object-fit: cover;
+    height: 25em;
+
+    .recipe{
+        padding: 2em 2em;
+    }
+
+    .recipe-intro{
+        text-align: center;
+        padding: .5em 0;
+        background-color: $semiWhiteColor;
+
+        h3{
+            width: 100%;
+            font-size: 1.2em;
+        }
+        span{
+            font-size: .7em;
+            font-style: italic;
+            background-color: white;
+        }
+        .fa-clock-rotate-left{
+            display: inline-block;
+            color: black;
+        }
+    }
+    .recipe-ingredients{
+        padding: .5em 0;
+        background-color: $semiWhiteColor;
+        ul{
+            padding-left: .3em;
+        }
+        ul li::before{
+            @include check-sign
+        }
+        .read-more-btn{
+            @include read-more-btn
+        }
+    }
+}
+// -------------------------------------
+
+// Background - image 
+@mixin bg-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    object-fit: cover;
+    
+}
+@mixin round-image-article {
+        max-width: 70%;
+        max-height: 100%;
+        border-radius:50%;
+}
+// ----------------------------
+
+// Forms 
+@mixin form {
+        div {
+            margin: .3em;
+        }
+         input{
+             padding: .3em;   
+             }
+
+         .sign-in {
+             input[type=submit]{
+             @include read-more-btn;
+             width: 30%;
+             display: block;
+             margin: .5em auto;
+             }
+             span{
+                 font-size: .8em;
+
+             }
+         } 
+}
+// -----------------------
+

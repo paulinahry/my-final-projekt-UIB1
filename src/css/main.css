@@ -1,3 +1,1052 @@
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  font-size: 16px;
+}
 
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/montserrat/v23/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Hw5aXo.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_Xvq_ROW4.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xoDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnANW6Cpk.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Square Peg";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/squarepeg/v1/y83eW48Nzw6ZlUHc-phrNDbhHQ.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Bangers";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bangers/v20/FeVQS0BTqb0h60ACH55Q2A.woff2) format("woff2");
+}
+#TopNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.61);
+}
+#TopNav h2 {
+  font-size: 1.5em;
+}
+#TopNav .burger {
+  width: 60px;
+  height: 8px;
+  background-color: black;
+  margin: 5px;
+}
+#TopNav .logo > a > img {
+  width: 170px;
+  height: 170px;
+}
+#TopNav .burger-menu > img {
+  width: 50px;
+  height: 50px;
+}
+
+.navi ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.navi ul a {
+  font-size: 1em;
+}
+.navi ul a:hover {
+  color: #6e9adb;
+}
+
+#index {
+  background-color: #f5e0e3;
+}
+
+.headline-1 {
+  background-color: #f5e0e3;
+}
+.headline-1 h1 {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 1em 0;
+  letter-spacing: 0.1em;
+}
+.headline-1 h1 span {
+  display: block;
+  font-family: "Square Peg";
+  font-size: 2em;
+  letter-spacing: 0.2em;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  padding: 2em;
+  background-color: #ecf5f5;
+}
+.banner h2, .banner h3 {
+  font-family: "Roboto Mono";
+  font-weight: bolder;
+}
+.banner h3 {
+  letter-spacing: 0.4em;
+}
+.banner img {
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-block;
+}
+.banner .banner-rabbit {
+  margin-right: 7px;
+}
+.banner .fa-arrow-right {
+  position: absolute;
+  animation: arrow 1s ease-out 4;
+}
+@keyframes arrow {
+  0% {
+    visibility: visible;
+    transform: translateX(-50px);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.tofu-recipe {
+  background-image: url(../../assets/main-page-bilder/tofu-start.png);
+  margin: 0.5em 0.5em;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  object-fit: cover;
+  height: 25em;
+}
+.tofu-recipe .recipe {
+  padding: 2em 2em;
+}
+.tofu-recipe .recipe-intro {
+  text-align: center;
+  padding: 0.5em 0;
+  background-color: rgba(255, 255, 255, 0.61);
+}
+.tofu-recipe .recipe-intro h3 {
+  width: 100%;
+  font-size: 1.2em;
+}
+.tofu-recipe .recipe-intro span {
+  font-size: 0.7em;
+  font-style: italic;
+  background-color: white;
+}
+.tofu-recipe .recipe-intro .fa-clock-rotate-left {
+  display: inline-block;
+  color: black;
+}
+.tofu-recipe .recipe-ingredients {
+  padding: 0.5em 0;
+  background-color: rgba(255, 255, 255, 0.61);
+}
+.tofu-recipe .recipe-ingredients ul {
+  padding-left: 0.3em;
+}
+.tofu-recipe .recipe-ingredients ul li::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 700;
+  content: "\f00c";
+  padding-right: 4px;
+}
+.tofu-recipe .recipe-ingredients .read-more-btn {
+  background-color: #050808;
+  color: white;
+  border: 1px black solid;
+  border-radius: 0.3em;
+  padding: 0.4em;
+  margin: 0.6em;
+  cursor: pointer;
+}
+.tofu-recipe .recipe-ingredients .read-more-btn button:hover {
+  background-color: white;
+  color: black;
+}
+
+.cesear-salad {
+  background-image: url(../../assets/main-page-bilder/cesear-salad.jpg);
+  margin: 0.5em 0.5em;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  object-fit: cover;
+  height: 25em;
+}
+.cesear-salad .recipe {
+  padding: 2em 2em;
+}
+.cesear-salad .recipe-intro {
+  text-align: center;
+  padding: 0.5em 0;
+  background-color: rgba(255, 255, 255, 0.61);
+}
+.cesear-salad .recipe-intro h3 {
+  width: 100%;
+  font-size: 1.2em;
+}
+.cesear-salad .recipe-intro span {
+  font-size: 0.7em;
+  font-style: italic;
+  background-color: white;
+}
+.cesear-salad .recipe-intro .fa-clock-rotate-left {
+  display: inline-block;
+  color: black;
+}
+.cesear-salad .recipe-ingredients {
+  padding: 0.5em 0;
+  background-color: rgba(255, 255, 255, 0.61);
+}
+.cesear-salad .recipe-ingredients ul {
+  padding-left: 0.3em;
+}
+.cesear-salad .recipe-ingredients ul li::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 700;
+  content: "\f00c";
+  padding-right: 4px;
+}
+.cesear-salad .recipe-ingredients .read-more-btn {
+  background-color: #050808;
+  color: white;
+  border: 1px black solid;
+  border-radius: 0.3em;
+  padding: 0.4em;
+  margin: 0.6em;
+  cursor: pointer;
+}
+.cesear-salad .recipe-ingredients .read-more-btn button:hover {
+  background-color: white;
+  color: black;
+}
+
+.portobello-burger {
+  background-image: url(../../assets/main-page-bilder/vege-burger.jpeg);
+  margin: 0.5em 0.5em;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  object-fit: cover;
+  height: 25em;
+}
+.portobello-burger .recipe {
+  padding: 2em 2em;
+}
+.portobello-burger .recipe-intro {
+  text-align: center;
+  padding: 0.5em 0;
+  background-color: rgba(255, 255, 255, 0.61);
+}
+.portobello-burger .recipe-intro h3 {
+  width: 100%;
+  font-size: 1.2em;
+}
+.portobello-burger .recipe-intro span {
+  font-size: 0.7em;
+  font-style: italic;
+  background-color: white;
+}
+.portobello-burger .recipe-intro .fa-clock-rotate-left {
+  display: inline-block;
+  color: black;
+}
+.portobello-burger .recipe-ingredients {
+  padding: 0.5em 0;
+  background-color: rgba(255, 255, 255, 0.61);
+}
+.portobello-burger .recipe-ingredients ul {
+  padding-left: 0.3em;
+}
+.portobello-burger .recipe-ingredients ul li::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 700;
+  content: "\f00c";
+  padding-right: 4px;
+}
+.portobello-burger .recipe-ingredients .read-more-btn {
+  background-color: #050808;
+  color: white;
+  border: 1px black solid;
+  border-radius: 0.3em;
+  padding: 0.4em;
+  margin: 0.6em;
+  cursor: pointer;
+}
+.portobello-burger .recipe-ingredients .read-more-btn button:hover {
+  background-color: white;
+  color: black;
+}
+
+.vegan-pizza-recipe {
+  background-image: url(../../assets/main-page-bilder/vegan-pizza.jpeg);
+  margin: 0.5em 0.5em;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  object-fit: cover;
+  height: 25em;
+}
+.vegan-pizza-recipe .recipe {
+  padding: 2em 2em;
+}
+.vegan-pizza-recipe .recipe-intro {
+  text-align: center;
+  padding: 0.5em 0;
+  background-color: rgba(255, 255, 255, 0.61);
+}
+.vegan-pizza-recipe .recipe-intro h3 {
+  width: 100%;
+  font-size: 1.2em;
+}
+.vegan-pizza-recipe .recipe-intro span {
+  font-size: 0.7em;
+  font-style: italic;
+  background-color: white;
+}
+.vegan-pizza-recipe .recipe-intro .fa-clock-rotate-left {
+  display: inline-block;
+  color: black;
+}
+.vegan-pizza-recipe .recipe-ingredients {
+  padding: 0.5em 0;
+  background-color: rgba(255, 255, 255, 0.61);
+}
+.vegan-pizza-recipe .recipe-ingredients ul {
+  padding-left: 0.3em;
+}
+.vegan-pizza-recipe .recipe-ingredients ul li::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 700;
+  content: "\f00c";
+  padding-right: 4px;
+}
+.vegan-pizza-recipe .recipe-ingredients .read-more-btn {
+  background-color: #050808;
+  color: white;
+  border: 1px black solid;
+  border-radius: 0.3em;
+  padding: 0.4em;
+  margin: 0.6em;
+  cursor: pointer;
+}
+.vegan-pizza-recipe .recipe-ingredients .read-more-btn button:hover {
+  background-color: white;
+  color: black;
+}
+
+.social-media-break {
+  height: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.social-media-break .fa-brands, .social-media-break .fa-solid {
+  font-size: 2em;
+  margin: 0.5em;
+  color: #b67983;
+}
+
+.load-more {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.load-more .load-more-btn {
+  height: 50px;
+  text-transform: uppercase;
+  background-color: #ecf5f5;
+  color: black;
+  border: 1px solid black;
+  border: none;
+  padding: 0.3em 1em;
+  margin: 1em;
+  cursor: pointer;
+}
+.load-more .load-more-btn:hover {
+  background-color: rgba(255, 255, 255, 0.61);
+  color: black;
+}
+
+footer {
+  margin-top: 1em;
+  background-color: #ecf5f5;
+  text-align: center;
+}
+footer .foot-subtitles {
+  padding: 2em;
+}
+footer .foot-subtitles h2 {
+  letter-spacing: 0.3em;
+}
+footer .newsletter .newsletter-ctn span:first-child {
+  font-size: 4em;
+  font-family: "Square Peg";
+  letter-spacing: 0.1em;
+}
+footer .newsletter .newsletter-ctn span:nth-child(2) {
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+footer .newsletter form div {
+  margin: 0.3em;
+}
+footer .newsletter form input {
+  padding: 0.3em;
+}
+footer .newsletter form .sign-in input[type=submit] {
+  background-color: #050808;
+  color: white;
+  border: 1px black solid;
+  border-radius: 0.3em;
+  padding: 0.4em;
+  margin: 0.6em;
+  cursor: pointer;
+  width: 200px;
+  display: block;
+  margin: 0.5em auto;
+}
+footer .newsletter form .sign-in input[type=submit] button:hover {
+  background-color: white;
+  color: black;
+}
+footer .newsletter form .sign-in span {
+  font-size: 0.8em;
+}
+footer .copyrights {
+  padding: 2em 0;
+}
+footer .copyrights p {
+  font-size: 0.7em;
+}
+
+.headline-contact {
+  background-color: #f5e0e3;
+}
+.headline-contact h1 {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 1em 0;
+  letter-spacing: 0.1em;
+}
+.headline-contact h1 span {
+  display: block;
+  font-family: "Square Peg";
+  font-size: 2em;
+  letter-spacing: 0.2em;
+}
+
+main.contact {
+  background-color: #f5e0e3;
+}
+
+.hello-contact {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1em 0;
+  background-color: rgba(255, 255, 255, 0.61);
+}
+.hello-contact p {
+  text-align: center;
+}
+
+.grid-main {
+  position: relative;
+  margin: 1em 0.3em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 7em 5em 7em 5em 4em;
+  gap: 0.3em;
+}
+.grid-main > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+.grid-main .item-1 {
+  background-image: url(../../assets/contact-page/cakes.jpeg);
+  grid-area: 1/1/3/2;
+}
+.grid-main .item-2 {
+  background-image: url(../../assets/contact-page/falafel.jpeg);
+  grid-area: 1/2/3/4;
+}
+.grid-main .item-3 {
+  background-image: url(../../assets/contact-page/octopus.jpeg);
+  grid-area: 4/1/6/3;
+}
+.grid-main .item-4 {
+  background-image: url(../../assets/contact-page/spring-rolls.jpeg);
+  grid-area: 5/3/6/5;
+}
+.grid-main .item-5 {
+  background-image: url(../../assets/contact-page/tacos.jpeg);
+  grid-area: 3/1/4/3;
+}
+.grid-main .item-6 {
+  background-image: url(../../assets/contact-page/pasta.jpeg);
+  grid-area: 2/4/3/5;
+}
+.grid-main .item-7 {
+  background-image: url(../../assets/contact-page/oat-smoothie-rassberries.jpeg);
+  grid-area: 3/3/5/5;
+}
+.grid-main .item-8 {
+  background-image: url(../../assets/contact-page/tacos-green.jpeg);
+  grid-area: 1/4/2/5;
+}
+
+.contact-form {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em 1em;
+  background-color: rgba(255, 255, 255, 0.61);
+}
+.contact-form .form div {
+  margin: 0.3em;
+}
+.contact-form .form input {
+  padding: 0.3em;
+}
+.contact-form .form .sign-in input[type=submit] {
+  background-color: #050808;
+  color: white;
+  border: 1px black solid;
+  border-radius: 0.3em;
+  padding: 0.4em;
+  margin: 0.6em;
+  cursor: pointer;
+  width: 30%;
+  display: block;
+  margin: 0.5em auto;
+}
+.contact-form .form .sign-in input[type=submit] button:hover {
+  background-color: white;
+  color: black;
+}
+.contact-form .form .sign-in span {
+  font-size: 0.8em;
+}
+.contact-form .form, .contact-form .message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form .message textarea {
+  height: 80px;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.61);
+}
+
+.headline-recipes {
+  background-color: #f5e0e3;
+  letter-spacing: 0.3em;
+}
+.headline-recipes h1 {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 1em 0;
+  letter-spacing: 0.1em;
+}
+.headline-recipes h1 span {
+  display: block;
+  font-family: "Square Peg";
+  font-size: 2em;
+  letter-spacing: 0.2em;
+}
+
+#recipesPage > .recipes-ctn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#recipesPage > .recipes-ctn article {
+  width: 10em;
+  height: 12.5em;
+  position: relative;
+}
+#recipesPage > .recipes-ctn article > .recipe-intro {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+#recipesPage > .recipes-ctn article > .recipe-intro span {
+  display: block;
+}
+#recipesPage > .recipes-ctn article > .recipe-intro .fa-clock-rotate-left {
+  display: none;
+}
+#recipesPage > .recipes-ctn article > .recipe-intro h3 {
+  font-size: 0.7em;
+}
+
+#recipesPage .gniochi {
+  background-image: url(../../assets/contact-page/gnocchi.jpeg);
+  margin: 0.5em 0.5em;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  object-fit: cover;
+  height: 25em;
+}
+#recipesPage .gniochi .recipe {
+  padding: 2em 2em;
+}
+#recipesPage .gniochi .recipe-intro {
+  text-align: center;
+  padding: 0.5em 0;
+  background-color: rgba(255, 255, 255, 0.61);
+}
+#recipesPage .gniochi .recipe-intro h3 {
+  width: 100%;
+  font-size: 1.2em;
+}
+#recipesPage .gniochi .recipe-intro span {
+  font-size: 0.7em;
+  font-style: italic;
+  background-color: white;
+}
+#recipesPage .gniochi .recipe-intro .fa-clock-rotate-left {
+  display: inline-block;
+  color: black;
+}
+#recipesPage .gniochi .recipe-ingredients {
+  padding: 0.5em 0;
+  background-color: rgba(255, 255, 255, 0.61);
+}
+#recipesPage .gniochi .recipe-ingredients ul {
+  padding-left: 0.3em;
+}
+#recipesPage .gniochi .recipe-ingredients ul li::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 700;
+  content: "\f00c";
+  padding-right: 4px;
+}
+#recipesPage .gniochi .recipe-ingredients .read-more-btn {
+  background-color: #050808;
+  color: white;
+  border: 1px black solid;
+  border-radius: 0.3em;
+  padding: 0.4em;
+  margin: 0.6em;
+  cursor: pointer;
+}
+#recipesPage .gniochi .recipe-ingredients .read-more-btn button:hover {
+  background-color: white;
+  color: black;
+}
+
+#recipesPage .octopus {
+  background-image: url(../../assets/contact-page/octopus.jpeg);
+  margin: 0.5em 0.5em;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  object-fit: cover;
+  height: 25em;
+}
+#recipesPage .octopus .recipe {
+  padding: 2em 2em;
+}
+#recipesPage .octopus .recipe-intro {
+  text-align: center;
+  padding: 0.5em 0;
+  background-color: rgba(255, 255, 255, 0.61);
+}
+#recipesPage .octopus .recipe-intro h3 {
+  width: 100%;
+  font-size: 1.2em;
+}
+#recipesPage .octopus .recipe-intro span {
+  font-size: 0.7em;
+  font-style: italic;
+  background-color: white;
+}
+#recipesPage .octopus .recipe-intro .fa-clock-rotate-left {
+  display: inline-block;
+  color: black;
+}
+#recipesPage .octopus .recipe-ingredients {
+  padding: 0.5em 0;
+  background-color: rgba(255, 255, 255, 0.61);
+}
+#recipesPage .octopus .recipe-ingredients ul {
+  padding-left: 0.3em;
+}
+#recipesPage .octopus .recipe-ingredients ul li::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 700;
+  content: "\f00c";
+  padding-right: 4px;
+}
+#recipesPage .octopus .recipe-ingredients .read-more-btn {
+  background-color: #050808;
+  color: white;
+  border: 1px black solid;
+  border-radius: 0.3em;
+  padding: 0.4em;
+  margin: 0.6em;
+  cursor: pointer;
+}
+#recipesPage .octopus .recipe-ingredients .read-more-btn button:hover {
+  background-color: white;
+  color: black;
+}
+
+#recipesPage .recipe-intro {
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+#articles .headline-article {
+  background-color: #f5e0e3;
+}
+#articles .headline-article h1 {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 1em 0;
+  letter-spacing: 0.1em;
+}
+#articles .headline-article h1 span {
+  display: block;
+  font-family: "Square Peg";
+  font-size: 2em;
+  letter-spacing: 0.2em;
+}
+#articles .food-garden {
+  margin: 1em auto;
+  width: 80%;
+  display: grid;
+  gap: 0.3em;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 7em 13em 7em 5em 4em 4em 4em 7em;
+}
+#articles .food-garden > div {
+  text-align: center;
+}
+#articles .food-garden > div p {
+  padding: 0.5em;
+}
+#articles .food-garden img {
+  max-width: 70%;
+  max-height: 100%;
+  border-radius: 50%;
+}
+#articles .food-garden .step-0 {
+  grid-area: 1/1/2/2;
+  background-color: #b67983;
+}
+#articles .food-garden .step-0 span {
+  font-family: "Bangers";
+  font-size: 5em;
+  color: #f5e0e3;
+}
+#articles .food-garden .step-1 {
+  grid-area: 1/2/2/7;
+  background-color: #b67983;
+}
+#articles .food-garden .step-1 h2 {
+  padding: 0.1em;
+  font-family: "Bangers";
+  letter-spacing: 0.1em;
+  font-size: 2em;
+  color: #f5e0e3;
+}
+#articles .food-garden .step-2 {
+  grid-area: 2/1/3/4;
+  background-color: #dcd3e7;
+}
+#articles .food-garden .step-3 {
+  grid-area: 2/4/3/7;
+  background-color: #d6f1f1;
+}
+#articles .food-garden .step-4 {
+  grid-area: 3/1/5/3;
+  background-color: #c0d8d6;
+}
+#articles .food-garden .step-5 {
+  grid-area: 3/3/5/5;
+  background-color: #eadef8;
+}
+#articles .food-garden .step-6 {
+  grid-area: 3/5/5/7;
+  background-color: #defadd;
+}
+#articles .food-garden .step-7 {
+  grid-area: 5/1/8/4;
+  background-color: #e0eee2;
+}
+#articles .food-garden .step-8 {
+  background-color: #cbebda;
+  grid-area: 5/4/8/7;
+}
+#articles .food-garden .step-9 {
+  grid-area: 8/1/9/7;
+  background-image: url(../../assets/articles/food-garden/plant_end.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+#workInProgress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#workInProgress h2 {
+  width: 100%;
+  letter-spacing: 0.3em;
+  padding: 1em;
+  text-align: center;
+  font-size: 3em;
+  font-family: "Square Peg";
+}
+#workInProgress a button {
+  background-color: #050808;
+  color: white;
+  border: 1px black solid;
+  border-radius: 0.3em;
+  padding: 0.4em;
+  margin: 0.6em;
+  cursor: pointer;
+}
+#workInProgress a button button:hover {
+  background-color: white;
+  color: black;
+}
+#workInProgress .first-progress {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#workInProgress .first-progress div {
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  max-width: 70%;
+  max-height: 100%;
+  border-radius: 50%;
+  margin: 1em;
+  animation: work-1 3s linear infinite;
+}
+#workInProgress .first-progress :nth-child(1) {
+  background-image: url(../../assets/work-in-progress/bajgiel.jpeg);
+  animation-delay: 0.2s;
+}
+#workInProgress .first-progress :nth-child(2) {
+  background-image: url(../../assets/work-in-progress/ice.jpeg);
+  animation-delay: 0.5s;
+}
+#workInProgress .first-progress :nth-child(3) {
+  background-image: url(../../assets/work-in-progress/sandwich.jpeg);
+  animation-delay: 0.8s;
+}
+#workInProgress .first-progress :nth-child(4) {
+  background-image: url(../../assets/work-in-progress/tuna-steak.jpeg);
+  animation-delay: 1.1s;
+}
+@keyframes work-1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #TopNav {
+    justify-content: flex-start;
+  }
+  #TopNav h2 {
+    font-family: "Square Peg";
+    font-size: 3em;
+    letter-spacing: 0.2em;
+  }
+  #TopNav .burger-menu {
+    display: none;
+  }
+
+  #index {
+    background-color: white;
+  }
+  #index .index-recipes {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  #index .index-recipes .recipe {
+    padding: 3em 0;
+  }
+  #index .index-recipes > .ctn-effect {
+    margin: 1em;
+    width: 40%;
+  }
+  #index .index-recipes .social-media-break {
+    display: none;
+  }
+
+  #contact .hello-contact {
+    width: 70%;
+  }
+  #contact .hello-contact p {
+    width: 100%;
+    font-size: 1.2em;
+  }
+  #contact .grid-main {
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 9em 7em 9em 7em 6em;
+  }
+  #contact .contact-form .message textarea {
+    height: 100px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.61);
+  }
+
+  #articles .food-garden {
+    width: 60%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 9em 17em 9em 7em repeat(3, 6em) 15em;
+  }
+  #articles .food-garden .step-0 > span {
+    font-size: 7em;
+  }
+  #articles .food-garden .step-1 h2 {
+    font-size: 3em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #TopNav .burger-menu {
+    display: none;
+  }
+
+  #index {
+    background-color: white;
+  }
+  #index .index-recipes {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  #index .index-recipes .recipe {
+    padding: 3em 4em;
+  }
+  #index .index-recipes > .ctn-effect {
+    margin: 1em;
+    width: 40%;
+  }
+  #index .index-recipes .social-media-break {
+    display: none;
+  }
+
+  #contact .hello-contact {
+    width: 70%;
+  }
+  #contact .hello-contact p {
+    width: 100%;
+    font-size: 1.5em;
+  }
+  #contact .grid-main {
+    width: 70%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 11em 9em 11em 9em 8em;
+  }
+  #contact .grid-main .contact-form .message textarea {
+    height: 150px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.61);
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  #TopNav h2 {
+    display: none;
+  }
+
+  #workInProgress .first-progress {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  #workInProgress .first-progress > div {
+    margin: 0.5em;
+    height: 50px;
+    width: 50px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
