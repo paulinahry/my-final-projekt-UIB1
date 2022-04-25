@@ -141,7 +141,7 @@ table {
 }
 .banner .fa-arrow-right {
   position: absolute;
-  animation: arrow 1s ease-out 4;
+  animation: arrow 1s ease-out infinite;
 }
 @keyframes arrow {
   0% {
@@ -848,6 +848,77 @@ main.contact {
   background-position: center;
   object-fit: cover;
 }
+#articles .infografik {
+  margin: 1em auto;
+  margin-top: 3em;
+  width: 80%;
+  background-color: #ecf5f5;
+}
+#articles .infografik .title .tip {
+  padding: 1em;
+  background-color: #f5e0e3;
+}
+#articles .infografik .title .tip h2 {
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+#articles .infografik h3 {
+  text-align: center;
+  font-size: 1.1em;
+  padding-top: 1em;
+  padding-bottom: 0.7em;
+}
+#articles .infografik .tip-1 div img, #articles .infografik .tip-3 div img, #articles .infografik .tip-5 div img {
+  float: right;
+}
+#articles .infografik .tip-ctn {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0.3em;
+}
+#articles .infografik .tip-ctn div > img {
+  max-width: 70%;
+  max-height: 100%;
+  border-radius: 50%;
+}
+#articles .infografik .tip-ctn .tip {
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.61);
+  border-radius: 15px;
+  position: relative;
+  width: 50%;
+  height: 30%;
+}
+#articles .infografik .tip-ctn .tip span {
+  font-size: 3em;
+  color: pink;
+  font-family: "Square Peg";
+  font-weight: bolder;
+  position: absolute;
+  left: 0;
+}
+#articles .infografik .sleep-grafik {
+  background-image: url(../../assets/articles/sleep-well/sleeping.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+  background-color: #f5e0e3;
+}
+#articles .infografik .sleep-grafik .intro {
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.61);
+  border-radius: 15px;
+  position: relative;
+  width: 85%;
+}
 
 #workInProgress {
   display: flex;
@@ -974,8 +1045,10 @@ main.contact {
     background-color: rgba(255, 255, 255, 0.61);
   }
 
-  #articles .food-garden {
+  #articles .infografik {
     width: 60%;
+  }
+  #articles .food-garden {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 9em 17em 9em 7em repeat(3, 6em) 15em;
   }
@@ -1046,6 +1119,10 @@ main.contact {
     margin: 0.5em;
     height: 50px;
     width: 50px;
+  }
+
+  #articles .sleep-improving p {
+    font-size: 0.8em;
   }
 }
 
