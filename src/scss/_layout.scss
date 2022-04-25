@@ -704,8 +704,11 @@ main.contact{
     }
 
     #articles{
+        .wrap-infografik{
+            display: flex;
+        }
         .infografik{
-            width: 60%;
+            width: 40%;
         }
         .food-garden{
             grid-template-columns: repeat(6, 1fr);

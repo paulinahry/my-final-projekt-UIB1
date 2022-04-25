@@ -1045,8 +1045,11 @@ main.contact {
     background-color: rgba(255, 255, 255, 0.61);
   }
 
+  #articles .wrap-infografik {
+    display: flex;
+  }
   #articles .infografik {
-    width: 60%;
+    width: 40%;
   }
   #articles .food-garden {
     grid-template-columns: repeat(6, 1fr);
