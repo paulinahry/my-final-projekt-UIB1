@@ -305,7 +305,6 @@ main.contact{
         grid-area: 1/4/2/5;
 
        }
-
 }
 // --------------------------------
 
@@ -332,7 +331,6 @@ main.contact{
             width: 250px;
             background-color: $semiWhiteColor;
         }
-        
 }
 // ------------------------
 
@@ -422,6 +420,7 @@ main.contact{
         >div{
             text-align: center;
             p{
+                font-size: .8em;
                 padding: .5em;
 
             }
@@ -554,13 +553,11 @@ main.contact{
             @include bg-img; 
             width: 100%;
             height: 250px;
-            
             background-color: $lightPinkColor;
-            .sleep-intro h2{
-            }
+
             .intro {
                 padding: 1em;
-                background-color: $semiWhiteColor;
+                background-color: rgba(255, 255, 255, 0.87);
                 border-radius: 15px;
                 position: relative;
                 width: 85%;
@@ -700,7 +697,6 @@ main.contact{
                 background-color: $semiWhiteColor;
             }
         }
-    
     }
 
     #articles{
@@ -712,17 +708,20 @@ main.contact{
         }
         .food-garden{
             grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: 9em 17em 9em 7em repeat(3, 6em) 15em;
+            grid-template-rows: 11em 19em 9em 7em repeat(3, 6em) 19em;
+            div p{
+                font-size: 1.1em;
+            }
 
         .step-0{
             >span{
-                font-size: 7em;
+                font-size: 6.5em;
             }
             
         }
         .step-1{
             h2{
-                font-size: 3em;
+                font-size: 2.5em;
             }
         }
     }
@@ -804,17 +803,10 @@ main.contact{
         #articles{
             .sleep-improving p{
                 font-size: .8em;
-
             }
         }
-    
     }
 // ------------------------------
 
 // ---------------------------------------------------
 /////////Media Queries END
-
-
-
-
-
