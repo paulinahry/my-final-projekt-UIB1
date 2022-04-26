@@ -73,13 +73,13 @@ table {
   background-color: black;
   margin: 5px;
 }
-#TopNav .logo > a > img {
-  width: 170px;
-  height: 170px;
+#TopNav .burger-menu {
+  position: fixed;
+  right: 0;
 }
-#TopNav .burger-menu > img {
-  width: 50px;
-  height: 50px;
+#TopNav .logo > a > img {
+  width: 140px;
+  height: 140px;
 }
 
 .navi ul {
@@ -997,6 +997,11 @@ main.contact {
   #TopNav {
     justify-content: flex-start;
   }
+  #TopNav .logo a img {
+    height: 150px;
+    width: 150px;
+    margin-right: 1em;
+  }
   #TopNav h2 {
     font-family: "Square Peg";
     font-size: 3em;
@@ -1112,7 +1117,7 @@ main.contact {
     background-color: rgba(255, 255, 255, 0.61);
   }
 }
-@media screen and (min-width: 320px) and (max-width: 600px) {
+@media screen and (min-width: 320px) and (max-width: 766px) {
   #TopNav h2 {
     display: none;
   }
