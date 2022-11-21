@@ -16,16 +16,23 @@
 @mixin h1 {
     background-color: $lightPinkColor;
     h1{
-        font-size: 1.2em;
+        font-size: 1.1em;
         text-align: center;
-        padding: 1em 0;
+        padding: 1.2em 0;
         letter-spacing: .1em;
+        @media screen and (min-width: $tablet) {
+            font-size: 1.3em;
+            
+        }
 
             span{
                 display: block;
                 font-family: 'Square Peg';
                 font-size: 2em;
                 letter-spacing: 0.2em;
+                @media screen and (min-width: $tablet) {
+                   padding: 0.3em;
+                }
         }
     }
 }  
@@ -39,10 +46,6 @@
     padding: .4em;
     margin: .6em;
     cursor: pointer;
-    & button:hover{
-        background-color: white;
-        color: black;
-    }
 }
 
 // Font Awesome check-sign
@@ -50,55 +53,80 @@
     font-family: "Font Awesome 6 Free"; 
     font-weight: 700; 
     content: "\f00c";
-    padding-right: 4px;
+    padding-right: .4em;
 }
 
 // Articles
 @mixin article-recipe {
-    margin: .5em .5em;
+    margin: .2em .1em;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position:center;
-    object-fit: cover;
-    height: 25em;
+    background-size: cover;
+
 
     .recipe{
-        padding: 2em 2em;
+        padding: 1em;
+        .recipe-intro{
+            padding: .5em 0; 
+            background-color: $semiWhiteColor;
+        }           
+
+
+            h3{
+                width: 100%;
+                font-size: 1.2em;
+                text-align: center;
+            }
+            span{
+                text-align: center;
+                font-size: .7em;
+                font-style: italic;
+                background-color: white;
+            }
+            .fa-clock-rotate-left{
+                padding-left: 0.4em;
+                display: inline-block;
+                color: black;
+            }
+        }
+        .recipe-ingredients{
+            background-color: $semiWhiteColor;
+            padding: .5em 0;
+
+            ul{
+                padding-left: .8em; 
+            }
+            ul li::before{
+                @include check-sign
+            }
+            .read-more-btn{
+                background-color: rgb(5, 8, 8);
+                color: white;
+                border: 1px black solid;
+                border-radius: .3em;
+                padding: .4em;
+                margin: .6em;
+                font-size: 1em;
+                cursor: pointer;
+            }
+        }
     }
 
-    .recipe-intro{
-        text-align: center;
-        padding: .5em 0;
-        background-color: $semiWhiteColor;
+    @media screen and (min-width:$tablet){
+        h3, h1 {
+            font-size: 1.5em;
+        }
+        
+    }
 
-        h3{
-            width: 100%;
-            font-size: 1.2em;
+    @media screen and (min-width: $desktop) {
+        .recipe{
+            aspect-ratio: 1/1;
         }
-        span{
-            font-size: .7em;
-            font-style: italic;
-            background-color: white;
-        }
-        .fa-clock-rotate-left{
-            display: inline-block;
-            color: black;
-        }
+        
     }
-    .recipe-ingredients{
-        padding: .5em 0;
-        background-color: $semiWhiteColor;
-        ul{
-            padding-left: .3em;
-        }
-        ul li::before{
-            @include check-sign
-        }
-        .read-more-btn{
-            @include read-more-btn
-        }
-    }
-}
+
 // -------------------------------------
 
 // Background - image 

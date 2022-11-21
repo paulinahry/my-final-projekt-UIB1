@@ -1,10 +1,13 @@
 @import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+:root {
+  font-size: 16px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat";
-  font-size: 16px;
 }
 
 ol, ul {
@@ -21,6 +24,17 @@ table {
   border-spacing: 0;
 }
 
+/* BREAKPOINTS */
+@media screen and (min-width: 768px) {
+  h3, h1 {
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 996px) {
+  .recipe {
+    aspect-ratio: 1/1;
+  }
+}
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
@@ -68,8 +82,8 @@ table {
   font-size: 1.5em;
 }
 #TopNav .burger {
-  width: 60px;
-  height: 8px;
+  width: 40px;
+  height: 4px;
   background-color: black;
   margin: 5px;
 }
@@ -85,10 +99,13 @@ table {
 .navi ul {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-around;
 }
 .navi ul a {
   font-size: 1em;
+  margin: 0.7em;
 }
 .navi ul a:hover {
   color: #6e9adb;
@@ -102,16 +119,29 @@ table {
   background-color: #f5e0e3;
 }
 .headline-1 h1 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   text-align: center;
-  padding: 1em 0;
+  padding: 1.2em 0;
   letter-spacing: 0.1em;
+}
+@media screen and (min-width: 768px) {
+  .headline-1 h1 {
+    font-size: 1.3em;
+  }
 }
 .headline-1 h1 span {
   display: block;
   font-family: "Square Peg";
   font-size: 2em;
   letter-spacing: 0.2em;
+}
+@media screen and (min-width: 768px) {
+  .headline-1 h1 span {
+    padding: 0.3em;
+  }
+}
+.headline-1 span {
+  padding: 0.2em 0;
 }
 
 .banner {
@@ -125,6 +155,7 @@ table {
   background-color: #ecf5f5;
 }
 .banner h2, .banner h3 {
+  padding: 0.2em;
   font-family: "Roboto Mono";
   font-weight: bolder;
 }
@@ -158,46 +189,47 @@ table {
 
 .tofu-recipe {
   background-image: url(../../assets/main-page-bilder/tofu-start.png);
-  margin: 0.5em 0.5em;
+  margin: 0.2em 0.1em;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-  object-fit: cover;
-  height: 25em;
+  background-size: cover;
 }
 .tofu-recipe .recipe {
-  padding: 2em 2em;
+  padding: 1em;
 }
-.tofu-recipe .recipe-intro {
-  text-align: center;
+.tofu-recipe .recipe .recipe-intro {
   padding: 0.5em 0;
   background-color: rgba(255, 255, 255, 0.61);
 }
-.tofu-recipe .recipe-intro h3 {
+.tofu-recipe .recipe h3 {
   width: 100%;
   font-size: 1.2em;
+  text-align: center;
 }
-.tofu-recipe .recipe-intro span {
+.tofu-recipe .recipe span {
+  text-align: center;
   font-size: 0.7em;
   font-style: italic;
   background-color: white;
 }
-.tofu-recipe .recipe-intro .fa-clock-rotate-left {
+.tofu-recipe .recipe .fa-clock-rotate-left {
+  padding-left: 0.4em;
   display: inline-block;
   color: black;
 }
 .tofu-recipe .recipe-ingredients {
-  padding: 0.5em 0;
   background-color: rgba(255, 255, 255, 0.61);
+  padding: 0.5em 0;
 }
 .tofu-recipe .recipe-ingredients ul {
-  padding-left: 0.3em;
+  padding-left: 0.8em;
 }
 .tofu-recipe .recipe-ingredients ul li::before {
   font-family: "Font Awesome 6 Free";
   font-weight: 700;
   content: "\f00c";
-  padding-right: 4px;
+  padding-right: 0.4em;
 }
 .tofu-recipe .recipe-ingredients .read-more-btn {
   background-color: #050808;
@@ -206,55 +238,53 @@ table {
   border-radius: 0.3em;
   padding: 0.4em;
   margin: 0.6em;
+  font-size: 1em;
   cursor: pointer;
-}
-.tofu-recipe .recipe-ingredients .read-more-btn button:hover {
-  background-color: white;
-  color: black;
 }
 
 .cesear-salad {
   background-image: url(../../assets/main-page-bilder/cesear-salad.jpg);
-  margin: 0.5em 0.5em;
+  margin: 0.2em 0.1em;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-  object-fit: cover;
-  height: 25em;
+  background-size: cover;
 }
 .cesear-salad .recipe {
-  padding: 2em 2em;
+  padding: 1em;
 }
-.cesear-salad .recipe-intro {
-  text-align: center;
+.cesear-salad .recipe .recipe-intro {
   padding: 0.5em 0;
   background-color: rgba(255, 255, 255, 0.61);
 }
-.cesear-salad .recipe-intro h3 {
+.cesear-salad .recipe h3 {
   width: 100%;
   font-size: 1.2em;
+  text-align: center;
 }
-.cesear-salad .recipe-intro span {
+.cesear-salad .recipe span {
+  text-align: center;
   font-size: 0.7em;
   font-style: italic;
   background-color: white;
 }
-.cesear-salad .recipe-intro .fa-clock-rotate-left {
+.cesear-salad .recipe .fa-clock-rotate-left {
+  padding-left: 0.4em;
   display: inline-block;
   color: black;
 }
 .cesear-salad .recipe-ingredients {
-  padding: 0.5em 0;
   background-color: rgba(255, 255, 255, 0.61);
+  padding: 0.5em 0;
 }
 .cesear-salad .recipe-ingredients ul {
-  padding-left: 0.3em;
+  padding-left: 0.8em;
 }
 .cesear-salad .recipe-ingredients ul li::before {
   font-family: "Font Awesome 6 Free";
   font-weight: 700;
   content: "\f00c";
-  padding-right: 4px;
+  padding-right: 0.4em;
 }
 .cesear-salad .recipe-ingredients .read-more-btn {
   background-color: #050808;
@@ -263,55 +293,53 @@ table {
   border-radius: 0.3em;
   padding: 0.4em;
   margin: 0.6em;
+  font-size: 1em;
   cursor: pointer;
-}
-.cesear-salad .recipe-ingredients .read-more-btn button:hover {
-  background-color: white;
-  color: black;
 }
 
 .portobello-burger {
   background-image: url(../../assets/main-page-bilder/vege-burger.jpeg);
-  margin: 0.5em 0.5em;
+  margin: 0.2em 0.1em;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-  object-fit: cover;
-  height: 25em;
+  background-size: cover;
 }
 .portobello-burger .recipe {
-  padding: 2em 2em;
+  padding: 1em;
 }
-.portobello-burger .recipe-intro {
-  text-align: center;
+.portobello-burger .recipe .recipe-intro {
   padding: 0.5em 0;
   background-color: rgba(255, 255, 255, 0.61);
 }
-.portobello-burger .recipe-intro h3 {
+.portobello-burger .recipe h3 {
   width: 100%;
   font-size: 1.2em;
+  text-align: center;
 }
-.portobello-burger .recipe-intro span {
+.portobello-burger .recipe span {
+  text-align: center;
   font-size: 0.7em;
   font-style: italic;
   background-color: white;
 }
-.portobello-burger .recipe-intro .fa-clock-rotate-left {
+.portobello-burger .recipe .fa-clock-rotate-left {
+  padding-left: 0.4em;
   display: inline-block;
   color: black;
 }
 .portobello-burger .recipe-ingredients {
-  padding: 0.5em 0;
   background-color: rgba(255, 255, 255, 0.61);
+  padding: 0.5em 0;
 }
 .portobello-burger .recipe-ingredients ul {
-  padding-left: 0.3em;
+  padding-left: 0.8em;
 }
 .portobello-burger .recipe-ingredients ul li::before {
   font-family: "Font Awesome 6 Free";
   font-weight: 700;
   content: "\f00c";
-  padding-right: 4px;
+  padding-right: 0.4em;
 }
 .portobello-burger .recipe-ingredients .read-more-btn {
   background-color: #050808;
@@ -320,55 +348,53 @@ table {
   border-radius: 0.3em;
   padding: 0.4em;
   margin: 0.6em;
+  font-size: 1em;
   cursor: pointer;
-}
-.portobello-burger .recipe-ingredients .read-more-btn button:hover {
-  background-color: white;
-  color: black;
 }
 
 .vegan-pizza-recipe {
   background-image: url(../../assets/main-page-bilder/vegan-pizza.jpeg);
-  margin: 0.5em 0.5em;
+  margin: 0.2em 0.1em;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-  object-fit: cover;
-  height: 25em;
+  background-size: cover;
 }
 .vegan-pizza-recipe .recipe {
-  padding: 2em 2em;
+  padding: 1em;
 }
-.vegan-pizza-recipe .recipe-intro {
-  text-align: center;
+.vegan-pizza-recipe .recipe .recipe-intro {
   padding: 0.5em 0;
   background-color: rgba(255, 255, 255, 0.61);
 }
-.vegan-pizza-recipe .recipe-intro h3 {
+.vegan-pizza-recipe .recipe h3 {
   width: 100%;
   font-size: 1.2em;
+  text-align: center;
 }
-.vegan-pizza-recipe .recipe-intro span {
+.vegan-pizza-recipe .recipe span {
+  text-align: center;
   font-size: 0.7em;
   font-style: italic;
   background-color: white;
 }
-.vegan-pizza-recipe .recipe-intro .fa-clock-rotate-left {
+.vegan-pizza-recipe .recipe .fa-clock-rotate-left {
+  padding-left: 0.4em;
   display: inline-block;
   color: black;
 }
 .vegan-pizza-recipe .recipe-ingredients {
-  padding: 0.5em 0;
   background-color: rgba(255, 255, 255, 0.61);
+  padding: 0.5em 0;
 }
 .vegan-pizza-recipe .recipe-ingredients ul {
-  padding-left: 0.3em;
+  padding-left: 0.8em;
 }
 .vegan-pizza-recipe .recipe-ingredients ul li::before {
   font-family: "Font Awesome 6 Free";
   font-weight: 700;
   content: "\f00c";
-  padding-right: 4px;
+  padding-right: 0.4em;
 }
 .vegan-pizza-recipe .recipe-ingredients .read-more-btn {
   background-color: #050808;
@@ -377,11 +403,8 @@ table {
   border-radius: 0.3em;
   padding: 0.4em;
   margin: 0.6em;
+  font-size: 1em;
   cursor: pointer;
-}
-.vegan-pizza-recipe .recipe-ingredients .read-more-btn button:hover {
-  background-color: white;
-  color: black;
 }
 
 .social-media-break {
@@ -459,10 +482,6 @@ footer .newsletter form .sign-in input[type=submit] {
   display: block;
   margin: 0.5em auto;
 }
-footer .newsletter form .sign-in input[type=submit] button:hover {
-  background-color: white;
-  color: black;
-}
 footer .newsletter form .sign-in span {
   font-size: 0.8em;
 }
@@ -477,16 +496,26 @@ footer .copyrights p {
   background-color: #f5e0e3;
 }
 .headline-contact h1 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   text-align: center;
-  padding: 1em 0;
+  padding: 1.2em 0;
   letter-spacing: 0.1em;
+}
+@media screen and (min-width: 768px) {
+  .headline-contact h1 {
+    font-size: 1.3em;
+  }
 }
 .headline-contact h1 span {
   display: block;
   font-family: "Square Peg";
   font-size: 2em;
   letter-spacing: 0.2em;
+}
+@media screen and (min-width: 768px) {
+  .headline-contact h1 span {
+    padding: 0.3em;
+  }
 }
 
 main.contact {
@@ -578,10 +607,6 @@ main.contact {
   display: block;
   margin: 0.5em auto;
 }
-.contact-form .form .sign-in input[type=submit] button:hover {
-  background-color: white;
-  color: black;
-}
 .contact-form .form .sign-in span {
   font-size: 0.8em;
 }
@@ -602,16 +627,26 @@ main.contact {
   letter-spacing: 0.3em;
 }
 .headline-recipes h1 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   text-align: center;
-  padding: 1em 0;
+  padding: 1.2em 0;
   letter-spacing: 0.1em;
+}
+@media screen and (min-width: 768px) {
+  .headline-recipes h1 {
+    font-size: 1.3em;
+  }
 }
 .headline-recipes h1 span {
   display: block;
   font-family: "Square Peg";
   font-size: 2em;
   letter-spacing: 0.2em;
+}
+@media screen and (min-width: 768px) {
+  .headline-recipes h1 span {
+    padding: 0.3em;
+  }
 }
 
 #recipesPage > .recipes-ctn {
@@ -629,59 +664,66 @@ main.contact {
   width: 100%;
   position: absolute;
   bottom: 0;
+  margin-bottom: 0.3em;
 }
 #recipesPage > .recipes-ctn article > .recipe-intro span {
   display: block;
+  background-color: white;
+  text-align: center;
+  font-size: 0.7em;
 }
 #recipesPage > .recipes-ctn article > .recipe-intro .fa-clock-rotate-left {
   display: none;
 }
 #recipesPage > .recipes-ctn article > .recipe-intro h3 {
-  font-size: 0.7em;
+  background-color: rgba(255, 255, 255, 0.61);
+  font-size: 0.9em;
+  text-align: center;
 }
 
 #recipesPage .gniochi {
   background-image: url(../../assets/contact-page/gnocchi.jpeg);
-  margin: 0.5em 0.5em;
+  margin: 0.2em 0.1em;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-  object-fit: cover;
-  height: 25em;
+  background-size: cover;
 }
 #recipesPage .gniochi .recipe {
-  padding: 2em 2em;
+  padding: 1em;
 }
-#recipesPage .gniochi .recipe-intro {
-  text-align: center;
+#recipesPage .gniochi .recipe .recipe-intro {
   padding: 0.5em 0;
   background-color: rgba(255, 255, 255, 0.61);
 }
-#recipesPage .gniochi .recipe-intro h3 {
+#recipesPage .gniochi .recipe h3 {
   width: 100%;
   font-size: 1.2em;
+  text-align: center;
 }
-#recipesPage .gniochi .recipe-intro span {
+#recipesPage .gniochi .recipe span {
+  text-align: center;
   font-size: 0.7em;
   font-style: italic;
   background-color: white;
 }
-#recipesPage .gniochi .recipe-intro .fa-clock-rotate-left {
+#recipesPage .gniochi .recipe .fa-clock-rotate-left {
+  padding-left: 0.4em;
   display: inline-block;
   color: black;
 }
 #recipesPage .gniochi .recipe-ingredients {
-  padding: 0.5em 0;
   background-color: rgba(255, 255, 255, 0.61);
+  padding: 0.5em 0;
 }
 #recipesPage .gniochi .recipe-ingredients ul {
-  padding-left: 0.3em;
+  padding-left: 0.8em;
 }
 #recipesPage .gniochi .recipe-ingredients ul li::before {
   font-family: "Font Awesome 6 Free";
   font-weight: 700;
   content: "\f00c";
-  padding-right: 4px;
+  padding-right: 0.4em;
 }
 #recipesPage .gniochi .recipe-ingredients .read-more-btn {
   background-color: #050808;
@@ -690,55 +732,53 @@ main.contact {
   border-radius: 0.3em;
   padding: 0.4em;
   margin: 0.6em;
+  font-size: 1em;
   cursor: pointer;
-}
-#recipesPage .gniochi .recipe-ingredients .read-more-btn button:hover {
-  background-color: white;
-  color: black;
 }
 
 #recipesPage .octopus {
   background-image: url(../../assets/contact-page/octopus.jpeg);
-  margin: 0.5em 0.5em;
+  margin: 0.2em 0.1em;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-  object-fit: cover;
-  height: 25em;
+  background-size: cover;
 }
 #recipesPage .octopus .recipe {
-  padding: 2em 2em;
+  padding: 1em;
 }
-#recipesPage .octopus .recipe-intro {
-  text-align: center;
+#recipesPage .octopus .recipe .recipe-intro {
   padding: 0.5em 0;
   background-color: rgba(255, 255, 255, 0.61);
 }
-#recipesPage .octopus .recipe-intro h3 {
+#recipesPage .octopus .recipe h3 {
   width: 100%;
   font-size: 1.2em;
+  text-align: center;
 }
-#recipesPage .octopus .recipe-intro span {
+#recipesPage .octopus .recipe span {
+  text-align: center;
   font-size: 0.7em;
   font-style: italic;
   background-color: white;
 }
-#recipesPage .octopus .recipe-intro .fa-clock-rotate-left {
+#recipesPage .octopus .recipe .fa-clock-rotate-left {
+  padding-left: 0.4em;
   display: inline-block;
   color: black;
 }
 #recipesPage .octopus .recipe-ingredients {
-  padding: 0.5em 0;
   background-color: rgba(255, 255, 255, 0.61);
+  padding: 0.5em 0;
 }
 #recipesPage .octopus .recipe-ingredients ul {
-  padding-left: 0.3em;
+  padding-left: 0.8em;
 }
 #recipesPage .octopus .recipe-ingredients ul li::before {
   font-family: "Font Awesome 6 Free";
   font-weight: 700;
   content: "\f00c";
-  padding-right: 4px;
+  padding-right: 0.4em;
 }
 #recipesPage .octopus .recipe-ingredients .read-more-btn {
   background-color: #050808;
@@ -747,15 +787,11 @@ main.contact {
   border-radius: 0.3em;
   padding: 0.4em;
   margin: 0.6em;
+  font-size: 1em;
   cursor: pointer;
-}
-#recipesPage .octopus .recipe-ingredients .read-more-btn button:hover {
-  background-color: white;
-  color: black;
 }
 
 #recipesPage .recipe-intro {
-  transition: 0.5s ease;
   cursor: pointer;
 }
 
@@ -763,16 +799,26 @@ main.contact {
   background-color: #f5e0e3;
 }
 #articles .headline-article h1 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   text-align: center;
-  padding: 1em 0;
+  padding: 1.2em 0;
   letter-spacing: 0.1em;
+}
+@media screen and (min-width: 768px) {
+  #articles .headline-article h1 {
+    font-size: 1.3em;
+  }
 }
 #articles .headline-article h1 span {
   display: block;
   font-family: "Square Peg";
   font-size: 2em;
   letter-spacing: 0.2em;
+}
+@media screen and (min-width: 768px) {
+  #articles .headline-article h1 span {
+    padding: 0.3em;
+  }
 }
 #articles .food-garden {
   margin: 1em auto;
@@ -945,10 +991,6 @@ main.contact {
   margin: 0.6em;
   cursor: pointer;
 }
-#workInProgress a button button:hover {
-  background-color: white;
-  color: black;
-}
 #workInProgress .first-progress {
   display: flex;
   flex-wrap: wrap;
@@ -996,6 +1038,12 @@ main.contact {
 @media screen and (min-width: 768px) {
   #TopNav {
     justify-content: flex-start;
+  }
+  #TopNav .navi ul {
+    flex-direction: row;
+  }
+  #TopNav .navi ul li {
+    margin-right: 1em;
   }
   #TopNav .logo a img {
     height: 150px;

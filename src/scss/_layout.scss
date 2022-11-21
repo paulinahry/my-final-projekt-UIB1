@@ -13,11 +13,9 @@
     h2{
         font-size: 1.5em;
     }
-
-
     .burger{
-        width: 60px;
-        height: 8px;
+        width: 40px;
+        height: 4px;
         background-color: black;
         margin: 5px;
     }
@@ -34,10 +32,13 @@
 .navi ul{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
 
     a{
     font-size: 1em;
+    margin: 0.7em;
     }
     a:hover{
         color: rgb(110, 154, 219);
@@ -54,6 +55,9 @@
 
 .headline-1{
     @include h1;
+    span{
+        padding: .2em 0;
+    }
 }
 // ----------------------------------
 
@@ -70,8 +74,9 @@
     background-color: $lightBlueColor;
  
     h2, h3{
-    font-family: 'Roboto Mono';
-    font-weight: bolder;
+        padding: .2em ;
+        font-family: 'Roboto Mono';
+        font-weight: bolder;
 
     }
     h3{
@@ -153,6 +158,9 @@
 // BUTTON Load more recipes
 .load-more{
     @include flex-center;
+
+
+
     
     
     .load-more-btn{
@@ -358,17 +366,21 @@ main.contact{
     justify-content: center;
 
         article{
-        width: 10em;
-        height: 12.5em;
-        position: relative;
+            width: 10em;
+            height: 12.5em;
+            position: relative;
 
         >.recipe-intro{
             width: 100%;
             position: absolute;
             bottom: 0;
+            margin-bottom: 0.3em;
 
             span{
                 display: block;
+                background-color: white;
+                text-align: center;
+                font-size: 0.7em;
             }
 
             .fa-clock-rotate-left{
@@ -376,7 +388,9 @@ main.contact{
             }
 
             h3{
-                font-size: 0.7em;
+                background-color: $semiWhiteColor;
+                font-size: 0.9em;
+                text-align: center;
             }
         }
     }    
@@ -393,10 +407,10 @@ main.contact{
     @include article-recipe;
 }
 // ------------------------------
-#recipesPage .recipe-intro{
-    transition: .5s ease;
+#recipesPage .recipe-intro{ 
     cursor: pointer;
 }
+
 // -------------------------------
 ////////// Recipes Page END --------------------------------------
 
@@ -642,8 +656,14 @@ main.contact{
 ///////////  MEDIA QUERIES START -------------
 
 // Tablet min 768px
-@media screen and (min-width: 768px ) {
+@media screen and (min-width: $tablet ) {
     #TopNav{
+        .navi ul{
+            flex-direction: row;
+            li{
+                margin-right: 1em;
+            }
+        }
         .logo a img{
             height: 150px;
             width: 150px;
